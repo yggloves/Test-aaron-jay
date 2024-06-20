@@ -6,14 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
         "Forest", "Lime", "Mint", "Olive",
         "Coffee", "Tea", "Red Bull", "Coca-Cola",
         "Plane", "Eagle", "Rocket", "Helicopter",
-        "Cheddar", "Gouda", "Mozzarella", "Swiss"
+        "Gouda", "Cheddar", "Mozzarella", "Swiss"
     ];
 
     const correctGroups = {
         'Shades of Green': ["Forest", "Lime", "Mint", "Olive"],
         'Drinks that have caffeine': ["Coffee", "Tea", "Red Bull", "Coca-Cola"],
         'Things that fly': ["Plane", "Eagle", "Rocket", "Helicopter"],
-        'Types of Cheese': ["Cheddar", "Gouda", "Mozzarella", "Swiss"]
+        'Types of Cheese': ["Gouda", "Cheddar", "Mozzarella", "Swiss"]
     };
 
     let selectedButtons = [];
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             alert(`Correct! Theme: ${theme}`);
         } else {
             selectedButtons.forEach(button => button.classList.add('incorrect'));
-            setTimeout(function() => {
+            setTimeout(() => {
                 selectedButtons.forEach(button => {
                     button.classList.remove('incorrect');
                     button.classList.remove('selected');
