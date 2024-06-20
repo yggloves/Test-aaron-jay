@@ -12,17 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const homeButton = document.getElementById('home-button');
 
     const words = [
-        "Forest", "Mint", "Lime", "Olive",
-        "Coffee", "Tea", "Red Bull", "Coca-Cola",
-        "Plane", "Eagle", "Rocket", "Helicopter",
-        "Gouda", "Mozzarella", "Cheddar", "Swiss"
+        "Red", "Blue", "Violet", "Gold",
+        "Dog", "Cat", "Horse", "Bird"
     ];
 
     const correctGroups = {
-        'Shades of Green': ["Forest", "Mint", "Lime", "Olive"],
-        'Drinks that have caffeine': ["Coffee", "Tea", "Red Bull", "Coca-Cola"],
-        'Things that fly': ["Plane", "Eagle", "Rocket", "Helicopter"],
-        'Types of Cheese': ["Gouda", "Mozzarella", "Cheddar", "Swiss"]
+        'Colors': ["Red", "Blue", "Violet", "Gold"],
+        'Animals': ["Dog", "Cat", "Horse", "Bird"]
     };
 
     let selectedButtons = [];
@@ -105,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
             selectedButtons.forEach(button => gameContainer.removeChild(button));
             selectedButtons = [];
 
-            if (correctSelections.size === 16) {
+            if (correctSelections.size === 8) { // 2 groups of 4 words each
                 const endTime = new Date();
                 const timeTaken = Math.floor((endTime - startTime) / 1000);
                 timeTakenElement.textContent = `${timeTaken} seconds`;
