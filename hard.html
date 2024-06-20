@@ -7,13 +7,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="instructions" class="modal">
+    <div id="start-screen" class="modal">
         <div class="modal-content">
-            <p>In this test you will need to pick a group of 4 words that correspond to a certain theme. There are also 4 words that do not correspond to any theme. Good luck!</p>
+            <p>In this test you will need to pick a group of 4 words that correspond to a certain theme. Good luck!</p>
             <button id="start-game">Start Game</button>
         </div>
     </div>
     <div id="game-container"></div>
+    <div id="completed-groups"></div>
+    <div id="message-modal" class="modal">
+        <div class="modal-content">
+            <p id="message-text"></p>
+            <button id="message-ok">OK</button>
+        </div>
+    </div>
+    <div id="congrats-modal" class="modal">
+        <div class="modal-content">
+            <p>Congratulations!</p>
+            <p>Time taken: <span id="time-taken"></span></p>
+            <button id="play-again">Play Again</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
